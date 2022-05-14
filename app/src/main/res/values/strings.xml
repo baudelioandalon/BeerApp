@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="test_loading_text">Cargando...</string>
+    <string name="beer_app_text">Beer App</string>
+    <string name="attenuation_nlevel">Attenuation \nlevel</string>
+    <string name="special_text">Special</string>
+</resources>

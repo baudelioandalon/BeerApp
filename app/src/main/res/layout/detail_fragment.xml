@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="beerImage"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:elevation="10dp"
+            android:src="@drawable/back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.example.test.utils.roundablelayout.RoundableLayout
+                    android:id="@+id/container_beer"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="20dp"
+                        android:scaleType="fitCenter"
+                        app:loadImage="@{beerImage}" />
+
+                </com.example.test.utils.roundablelayout.RoundableLayout>
+
+                <com.example.test.utils.roundablelayout.RoundableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="21dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/container_beer"
+                    app:roundable_cornerLeftTop="30dp"
+                    app:roundable_cornerRightTop="30dp">
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/black"
+                        android:textSize="40sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Cu bocan Whisky" />
+
+                    <TextView
+                        android:id="@+id/txtTagline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:lines="2"
+                        android:maxLength="20"
+                        android:minLines="2"
+                        android:textColor="@color/gray_two"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toEndOf="@+id/txtSince"
+                        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                        tools:text="Cu Bocan Whisky" />
+
+                    <TextView
+                        android:id="@+id/txtSince"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="@+id/txtTitle"
+                        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                        tools:text="06/2016" />
+
+                    <TextView
+                        android:id="@+id/txtType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/attenuation_nlevel"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray_two"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toStartOf="@+id/txtSince"
+                        app:layout_constraintTop_toBottomOf="@+id/txtSince" />
+
+                    <TextView
+                        android:id="@+id/txtLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="@+id/txtType"
+                        app:layout_constraintStart_toStartOf="@+id/txtType"
+                        app:layout_constraintTop_toBottomOf="@+id/txtType"
+                        tools:text="80%" />
+
+                    <TextView
+                        android:id="@+id/txtIngredients"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="@string/special_text"
+                        android:textAlignment="center"
+                        android:textColor="@color/gray_two"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toTopOf="@+id/txtLevel"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/txtType" />
+
+                    <TextView
+                        android:id="@+id/txtIngredientOne"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:lines="2"
+                        android:maxLength="20"
+                        android:minLines="2"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="@+id/txtIngredients"
+                        app:layout_constraintTop_toBottomOf="@+id/txtType"
+                        tools:text="Malt" />
+
+                    <TextView
+                        android:id="@+id/txt_description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/black_gray"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtLevel"
+                        tools:text="This text is text example" />
+
+                </com.example.test.utils.roundablelayout.RoundableLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

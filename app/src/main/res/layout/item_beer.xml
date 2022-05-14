@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="colorSelected"
+            type="Integer" />
+
+        <variable
+            name="customModel"
+            type="com.example.test.domain.entity.BeerResponseItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.example.test.utils.roundablelayout.RoundableLayout
+            android:id="@+id/container_beer"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="15dp"
+            android:elevation="5dp"
+            app:roundable_cornerAll="15dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="20dp"
+                android:scaleType="fitCenter"
+                app:loadImage="@{customModel.image_url}" />
+
+        </com.example.test.utils.roundablelayout.RoundableLayout>
+
+    </LinearLayout>
+</layout>

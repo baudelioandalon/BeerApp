@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RoundableLayout">
+        <attr name="roundable_cornerLeftTop" format="dimension" />
+        <attr name="roundable_cornerRightTop" format="dimension" />
+        <attr name="roundable_cornerLeftBottom" format="dimension" />
+        <attr name="roundable_cornerRightBottom" format="dimension" />
+        <attr name="roundable_backgroundColor" format="color" />
+        <attr name="roundable_strokeLineWidth" format="dimension" />
+        <attr name="roundable_strokeLineColor" format="color" />
+        <attr name="roundable_dashLineWidth" format="dimension" />
+        <attr name="roundable_dashLineGap" format="dimension" />
+        <attr name="roundable_cornerLeftSide" format="dimension" />
+        <attr name="roundable_cornerRightSide" format="dimension" />
+        <attr name="roundable_cornerAll" format="dimension" />
+    </declare-styleable>
+
+</resources>
